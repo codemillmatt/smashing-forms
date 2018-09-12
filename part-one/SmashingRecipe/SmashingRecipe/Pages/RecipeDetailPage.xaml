@@ -2,8 +2,11 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="SmashingRecipe.RecipeDetailPage"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    x:Class="SmashingRecipe.RecipeDetailPage"   
+    ios:Page.UseSafeArea="true"
     Title="{Binding Name}">
+    
     <ContentPage.Content>
         <FlexLayout
             Margin="10"

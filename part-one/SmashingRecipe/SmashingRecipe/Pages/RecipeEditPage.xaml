@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    ios:Page.UseSafeArea="true"
     x:Class="SmashingRecipe.RecipeEditPage">
     
     <ContentPage.Content>
@@ -9,10 +11,14 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-            <TableView Grid.Row="0" Intent="Form" HasUnevenRows="true">
+            <TableView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                       Intent="Form" HasUnevenRows="true">
                 <TableSection Title="General">
                     <EntryCell x:Name="recipeNameCell" Label="Name" /> 
                 </TableSection>
@@ -34,8 +40,8 @@
                 </TableSection>
             </TableView>
 
-            <Button Text="Save" Grid.Row="1" x:Name="saveButton" />
-            <Button Text="Cancel" Grid.Row="2" x:Name="cancelButton" />
+            <Button Text="Save" Grid.Row="1" Grid.Column="0" x:Name="saveButton" />
+            <Button Text="Cancel" Grid.Row="1" Grid.Column="1" x:Name="cancelButton" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
