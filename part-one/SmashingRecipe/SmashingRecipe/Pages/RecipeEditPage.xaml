@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="SmashingRecipe.RecipeEditPage">
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TableView Grid.Row="0" Intent="Form" HasUnevenRows="true">
+                <TableSection Title="General">
+                    <EntryCell x:Name="recipeNameCell" Label="Name" /> 
+                </TableSection>
+                
+                <TableSection Title="Ingredients">
+                    <ViewCell>
+                        <StackLayout Padding="15">
+                            <Editor x:Name="ingredientsCell" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                
+                <TableSection Title="Directions">
+                    <ViewCell>
+                        <StackLayout Padding="15">
+                            <Editor x:Name="directionsCell" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableView>
+
+            <Button Text="Save" Grid.Row="1" x:Name="saveButton" />
+            <Button Text="Cancel" Grid.Row="2" x:Name="cancelButton" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
