@@ -10,6 +10,7 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Pages\" />
+    <Folder Include="Styles\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="MainPage.xaml.cs" />

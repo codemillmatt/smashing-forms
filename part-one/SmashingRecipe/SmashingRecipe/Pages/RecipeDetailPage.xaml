@@ -8,25 +8,27 @@
     Title="{Binding Name}">
     
     <ContentPage.Content>
-        <FlexLayout
-            Margin="10"
-            Direction="Column"
-            AlignItems="Center"
-            JustifyContent="SpaceEvenly">
+        <ScrollView>
+            <FlexLayout
+                Margin="10"
+                Direction="Column"
+                AlignItems="Center"
+                JustifyContent="SpaceEvenly">
 
-            <Label Text="{Binding Name} StringFormat='Recipe Name: {0}'}"  />
+                <Label Text="{Binding Name} StringFormat='Recipe Name: {0}'}"  />
 
-            <Image Source="matt.png" FlexLayout.Basis="20%" />
+                <Image Source="matt.png" FlexLayout.Basis="20%" />
 
-            <Label FontAttributes="Bold" Text="Ingredients" FontSize="Large"
-                   HorizontalOptions="FillAndExpand" FlexLayout.AlignSelf="flex-start" />
-            <Label Text="{Binding Ingredients}" />
+                <Label FontAttributes="Bold" Text="Ingredients" FontSize="Large"
+                       HorizontalOptions="FillAndExpand" FlexLayout.AlignSelf="flex-start" />
+                <Label Text="{Binding Ingredients}" />
 
-            <Label FontAttributes="Bold" Text="Directions" FontSize="Large"
-                   HorizontalOptions="FillAndExpand" FlexLayout.AlignSelf="flex-start" />
-            <Label Text="{Binding Directions}" />
+                <Label FontAttributes="Bold" Text="Directions" FontSize="Large"
+                       HorizontalOptions="FillAndExpand" FlexLayout.AlignSelf="flex-start" />
+                <Label Text="{Binding Directions}" />
 
-        </FlexLayout>
+            </FlexLayout>
+        </ScrollView>
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Edit" Clicked="Edit_Clicked" />
