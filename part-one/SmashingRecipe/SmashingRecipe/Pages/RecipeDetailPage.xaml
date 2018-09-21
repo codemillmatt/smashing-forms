@@ -10,22 +10,28 @@
     <ContentPage.Content>
         <ScrollView>
             <FlexLayout
-                Margin="10"
-                Direction="Column"
-                AlignItems="Center"
-                JustifyContent="SpaceEvenly">
+                AlignItems="Start"
+                AlignContent="Start"
+                Wrap="Wrap">
 
-                <Label Text="{Binding Name} StringFormat='Recipe Name: {0}'}"  />
+                <Image Source="matt.png" FlexLayout.Basis="100%" />
 
-                <Image Source="matt.png" FlexLayout.Basis="20%" />
+                <Label Text="{Binding Name}" HorizontalTextAlignment="Center"
+                       FontAttributes="Bold" FontSize="Large" Margin="5, 10" />
+                       
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
 
-                <Label FontAttributes="Bold" Text="Ingredients" FontSize="Large"
+                <Label Text="Ingredients" FontAttributes="Bold" FontSize="Medium" Margin="5,10"
                        HorizontalOptions="FillAndExpand" FlexLayout.AlignSelf="flex-start" />
-                <Label Text="{Binding Ingredients}" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Ingredients}" Margin="5,10" FontSize="Small" />
 
-                <Label FontAttributes="Bold" Text="Directions" FontSize="Large"
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                
+                <Label Text="Directions" FontAttributes="Bold" FontSize="Medium" Margin="5,10"
                        HorizontalOptions="FillAndExpand" FlexLayout.AlignSelf="flex-start" />
-                <Label Text="{Binding Directions}" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Directions}" Margin="5,10" FontSize="Small" />
 
             </FlexLayout>
         </ScrollView>

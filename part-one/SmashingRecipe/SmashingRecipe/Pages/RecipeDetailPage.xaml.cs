@@ -9,6 +9,11 @@ namespace SmashingRecipe
     {
         Recipe TheRecipe { get; set; }
 
+        public RecipeDetailPage()
+        {
+            InitializeComponent();
+        }
+
         public RecipeDetailPage(Recipe recipe)
         {
             InitializeComponent();
