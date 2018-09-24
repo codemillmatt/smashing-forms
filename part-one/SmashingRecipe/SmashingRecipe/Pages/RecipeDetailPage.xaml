@@ -6,32 +6,30 @@
     x:Class="SmashingRecipe.RecipeDetailPage"   
     ios:Page.UseSafeArea="true"
     Title="{Binding Name}">
-    
+   
+<ContentPage.Resources>
+    <StyleSheet Source="../Styles/RecipeDetailStyle.css" />
+</ContentPage.Resources>
+
 <ContentPage.Content>
     <ScrollView>
-        <FlexLayout
-            AlignItems="Start"
-            AlignContent="Start"                   
-            Wrap="Wrap">
+        <FlexLayout StyleClass="flexContent">
 
-            <Image Source="buns.png" FlexLayout.Basis="100%" />
+            <Image Source="buns.png" />
 
-            <Label Text="{Binding Name}" HorizontalTextAlignment="Center" TextColor="#01487E"
-                   FontAttributes="Bold" FontSize="Large" Margin="10, 10" />
+            <Label Text="{Binding Name}" StyleClass="foodHeader" />
                    
-            <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+            <BoxView StyleClass="spacer" />
 
-            <Label Text="Ingredients" FontAttributes="Bold" FontSize="Medium" TextColor="#EE3F60"
-                   Margin="10,10" HorizontalOptions="FillAndExpand" />
-            <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
-            <Label Text="{Binding Ingredients}" Margin="10,10" FontSize="Small" />
+            <Label Text="Ingredients" StyleClass="dataLabel" HorizontalOptions="FillAndExpand" />
+            <BoxView StyleClass="spacer" />
+            <Label Text="{Binding Ingredients}" StyleClass="data" />
 
-            <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+            <BoxView StyleClass="spacer" />
             
-            <Label Text="Directions" FontAttributes="Bold" FontSize="Medium" TextColor="#EE3F60" 
-                   Margin="10,10" HorizontalOptions="FillAndExpand" />
-            <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
-            <Label Text="{Binding Directions}" Margin="10,10" FontSize="Small" />
+            <Label Text="Directions" StyleClass="dataLabel" HorizontalOptions="FillAndExpand" />
+            <BoxView StyleClass="spacer" />
+            <Label Text="{Binding Directions}" StyleClass="data" />
 
         </FlexLayout>
     </ScrollView>

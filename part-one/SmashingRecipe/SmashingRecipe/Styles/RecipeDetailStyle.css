@@ -1,0 +1,33 @@
+﻿.flexContent {
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+image {
+    flex-basis: 100%;
+}
+
+.spacer {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.foodHeader {
+    font-size: large;
+    font-weight: bold;
+    color: #01487E;
+    margin: 10 10;
+}
+
+.dataLabel {
+    font-size: medium;
+    font-weight: bold;
+    color: #EE3F60;
+    margin: 10 10;
+}
+
+.data {
+    font-size: small;
+    margin: 10 10;
+}
