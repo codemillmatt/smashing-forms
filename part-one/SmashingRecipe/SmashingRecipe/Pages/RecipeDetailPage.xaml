@@ -7,35 +7,35 @@
     ios:Page.UseSafeArea="true"
     Title="{Binding Name}">
     
-    <ContentPage.Content>
-        <ScrollView>
-            <FlexLayout
-                AlignItems="Start"
-                AlignContent="Start"
-                Wrap="Wrap">
+<ContentPage.Content>
+    <ScrollView>
+        <FlexLayout
+            AlignItems="Start"
+            AlignContent="Start"                   
+            Wrap="Wrap">
 
-                <Image Source="matt.png" FlexLayout.Basis="100%" />
+            <Image Source="buns.png" FlexLayout.Basis="100%" />
 
-                <Label Text="{Binding Name}" HorizontalTextAlignment="Center"
-                       FontAttributes="Bold" FontSize="Large" Margin="5, 10" />
-                       
-                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+            <Label Text="{Binding Name}" HorizontalTextAlignment="Center" TextColor="#01487E"
+                   FontAttributes="Bold" FontSize="Large" Margin="10, 10" />
+                   
+            <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
 
-                <Label Text="Ingredients" FontAttributes="Bold" FontSize="Medium" Margin="5,10"
-                       HorizontalOptions="FillAndExpand" FlexLayout.AlignSelf="flex-start" />
-                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
-                <Label Text="{Binding Ingredients}" Margin="5,10" FontSize="Small" />
+            <Label Text="Ingredients" FontAttributes="Bold" FontSize="Medium" TextColor="#EE3F60"
+                   Margin="10,10" HorizontalOptions="FillAndExpand" />
+            <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+            <Label Text="{Binding Ingredients}" Margin="10,10" FontSize="Small" />
 
-                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
-                
-                <Label Text="Directions" FontAttributes="Bold" FontSize="Medium" Margin="5,10"
-                       HorizontalOptions="FillAndExpand" FlexLayout.AlignSelf="flex-start" />
-                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
-                <Label Text="{Binding Directions}" Margin="5,10" FontSize="Small" />
+            <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+            
+            <Label Text="Directions" FontAttributes="Bold" FontSize="Medium" TextColor="#EE3F60" 
+                   Margin="10,10" HorizontalOptions="FillAndExpand" />
+            <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+            <Label Text="{Binding Directions}" Margin="10,10" FontSize="Small" />
 
-            </FlexLayout>
-        </ScrollView>
-    </ContentPage.Content>
+        </FlexLayout>
+    </ScrollView>
+</ContentPage.Content>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Edit" Clicked="Edit_Clicked" />
     </ContentPage.ToolbarItems>

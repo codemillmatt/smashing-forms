@@ -13,13 +13,6 @@ namespace SmashingRecipe
         {
             InitializeComponent();
 
-            //AllRecipes = new List<Recipe>();
-            //AllRecipes.Add(new Recipe { Name = "Buns", Ingredients = "Love and some other stuff", Directions = "You're going to have to read on and on and on and on and on and on and on and on and on and on and on and on You're going to have to read on and on and on and on and on and on and on and on and on and on and on and on" });
-            //AllRecipes.Add(new Recipe { Name = "Coleslaw" });
-            //AllRecipes.Add(new Recipe { Name = "Baked Beans" });
-
-            //recipesList.ItemsSource = App.AllRecipes;
-
             recipesList.ItemSelected += async (sender, e) =>
             {
                 if (e.SelectedItem != null)
@@ -45,7 +38,13 @@ namespace SmashingRecipe
         {
             var editPage = new RecipeEditPage();
 
-            await Navigation.PushModalAsync(new NavigationPage(editPage));
+            var editNavPage = new NavigationPage(editPage)
+            {
+                BarBackgroundColor = Color.FromHex("#01487E"),
+                BarTextColor = Color.White
+            };
+
+            await Navigation.PushModalAsync(editNavPage);
         }
     }
 }
