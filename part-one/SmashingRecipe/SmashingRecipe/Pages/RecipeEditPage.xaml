@@ -40,8 +40,8 @@
                 </TableSection>
             </TableView>
 
-            <Button Text="Save" Grid.Row="1" Grid.Column="0" x:Name="saveButton" />
-            <Button Text="Cancel" Grid.Row="1" Grid.Column="1" x:Name="cancelButton" />
+            <Button Text="Save" Grid.Row="1" Grid.Column="0" x:Name="saveButton" BackgroundColor="#EE3F60" TextColor="White" />
+            <Button Text="Cancel" Grid.Row="1" Grid.Column="1" x:Name="cancelButton" BackgroundColor="#4CC7F2" TextColor="White" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

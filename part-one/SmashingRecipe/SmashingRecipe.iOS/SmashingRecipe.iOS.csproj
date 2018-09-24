@@ -141,6 +141,8 @@
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\matt.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\matt.imageset\matt.png" />
+    <ImageAsset Include="Assets.xcassets\buns.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\buns.imageset\buns.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -162,5 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\matt.imageset\" />
+    <Folder Include="Assets.xcassets\buns.imageset\" />
   </ItemGroup>
 </Project>
